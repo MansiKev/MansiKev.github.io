@@ -121,6 +121,6 @@ var getScriptPromisify = (src) => {
     }
 
    }
-   customElements.define("csap-sample-linechart", LineChart);
+   customElements.define("sap-sample-linechart", LineChart);
 
   })();
