@@ -27,7 +27,7 @@ var getScriptPromisify = (src) => {
         
         am4core.useTheme(am4themes_animated);
         
-        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        var chart = am4core.create(this._root, am4charts.XYChart);
         chart.data = [{
             "date": "2012-07-27",
             "value": 13
