@@ -1,0 +1,47 @@
+{
+    "id":"sap.sample.linechart",
+    "version":"0.0.1",
+    "name":"Amchart linechart",
+    "description":"line chart",
+    "newInstancePrefix":"linechart",
+    "vendor":"Mansi",
+    "license": "",
+    "webcomponents":[
+        {
+            "kind": "main",
+            "tag": "sap-sample-linechart",
+            "url": "https://mansikev.github.io/linedatechart.js",
+            "integrity":"",
+            "ignoreIntegrity":true
+        }
+    ],
+    "properties":{
+        "height":{
+            "type":"integer",
+            "default":800
+         },
+         "width":{
+            "type":"integer",
+            "default":800
+         }
+    },
+    "methods":{},
+    "events":{},
+    "dataBindings":{
+        "dataBinding":{
+            "feeds": [
+                {
+                    "id":"dimensions",
+                    "description":"Dimensions",
+                    "type":"dimension"
+                },
+                {
+                    "id":"measures",
+                    "description":"Measures",
+                    "type":"mainStructureMember"
+                }
+            ]
+        }
+    }
+
+}
