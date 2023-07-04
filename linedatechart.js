@@ -80,7 +80,7 @@ const parseMetadata = metadata => {
 
       am4core.useTheme(am4themes_animated);
 
-    am4core.create(this._root, am4charts.XYChart);
+      // var chart = am4core.create(this._root, am4charts.XYChart);
       // chart.data = [{
       //   "date": "2012-07-27",
       //   "value": 13
@@ -648,11 +648,11 @@ const parseMetadata = metadata => {
       // }];
 
       // Create axes
-      var dateAxis = data.xAxes.push(new am4charts.DateAxis());
-      var valueAxis = data.yAxes.push(new am4charts.ValueAxis());
+      var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
       // Create series
-      data.series.push(new am4charts.LineSeries());
+      chart.series.push(new am4charts.LineSeries());
   
       series.dataFields.valueY = "value";
       series.dataFields.dateX = "date";
