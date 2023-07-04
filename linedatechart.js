@@ -653,9 +653,10 @@ const parseMetadata = metadata => {
 
       // Create series
       chart.series.push(new am4charts.LineSeries());
-
-      series.dataFields.valueY = "value";
-      series.dataFields.dateX = "date";
+    series.data.valueY="value";
+    series.data.dateX="date";
+      // series.dataFields.valueY = "value";
+      // series.dataFields.dateX = "date";
       series.tooltipText = "{value}"
       series.strokeWidth = 2;
       series.minBulletDistance = 15;
