@@ -648,8 +648,8 @@ const parseMetadata = metadata => {
       // }];
 
       // Create axes
-      var dateAxis = data.xAxes.push(new am4charts.DateAxis());
-      var valueAxis = data.yAxes.push(new am4charts.ValueAxis());
+      var dateAxis = data.xAxes(new am4charts.DateAxis());
+      var valueAxis = data.yAxes(new am4charts.ValueAxis());
 
       // Create series
       chart.series.push(new am4charts.LineSeries());
