@@ -1,9 +1,9 @@
 {
-	"id": "com.sap.sample.linechart",
+	"id": "com.sap.sample.alinechart",
 	"version": "1.0.1",
 	"name": "Amchart Linecahrt",
-	"description": "LineChart",
-	"newInstancePrefix": "linechart",
+	"description": "aLineChart",
+	"newInstancePrefix": "alinechart",
 	"icon": "",
 	"vendor": "Mansi",
 	"eula": "",
@@ -11,7 +11,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-sample-linechart",
+			"tag": "com-sap-sample-alinechart",
 			"url": "https://mansikev.github.io/alinechart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
@@ -29,7 +29,7 @@
 	},
 	"methods": {
 		"render": {
-            "parameter":[
+            "parameters":[
                 {
                     "name":"resultset",
                     "type":"any",
