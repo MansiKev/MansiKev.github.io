@@ -78,6 +78,7 @@ const parseMetadata = metadata => {
         })
       })
 
+      console.log(data);
       am4core.useTheme(am4themes_animated);
 
       var chart = am4core.create(this._root, am4charts.XYChart);
@@ -662,11 +663,11 @@ const parseMetadata = metadata => {
       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
       // Create series
-      var series1 = chart.series.push(new am4charts.LineSeries());
+      // var series = chart.series.push(new am4charts.LineSeries());
    
-      series1.dataFields.valueY = "value";
-      series1.dataFields.dateX = "date";
-      series1.tooltipText = "{value}"
+      series.dataFields.valueY = "value";
+      series.dataFields.dateX = "date";
+      series.tooltipText = "{value}"
       series.strokeWidth = 2;
       series.minBulletDistance = 15;
 
