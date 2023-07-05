@@ -41,8 +41,6 @@ var getScriptPromisify = (src) => {
             })
             console.log(data);
             chart.data=data;
-           
-              
               // Set input format for the dates
               chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
               
