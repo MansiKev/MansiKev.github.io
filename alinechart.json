@@ -1,5 +1,5 @@
 {
-	"id": "com.sap.sample.chart",
+	"id": "com.sap.sample.linechart",
 	"version": "1.0.1",
 	"name": "Amchart Linecahrt",
 	"description": "LineChart",
@@ -11,8 +11,8 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-sample-chart",
-			"url": "",
+			"tag": "com-sap-sample-linechart",
+			"url": "https://mansikev.github.io/alinechart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
@@ -29,7 +29,13 @@
 	},
 	"methods": {
 		"render": {
-			"description": "To Plot Chart"
+            "parameter":[
+                {
+                    "name":"resultset",
+                    "type":"any",
+                    "description":"plot to chart"
+                }
+            ]
 		}
 	},
 	"events": {

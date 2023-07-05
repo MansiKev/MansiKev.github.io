@@ -655,6 +655,6 @@ var getScriptPromisify = (src) => {
               dateAxis.keepSelection = true;
         }
     }
-
+    customElements.define("com.sap.sample.linechart", ALineChart);
 
 })();
