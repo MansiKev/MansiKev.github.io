@@ -83,23 +83,23 @@ var getScriptPromisify = (src) => {
           })
         })
   
-    //     const myChart = echarts.init(this._root, 'main')
-    //     const option = {
-    //       xAxis: {
-    //         type: 'category',
-    //         data: categoryData
-    //       },
-    //       yAxis: {
-    //         type: 'value'
-    //       },
-    //       tooltip: {
-    //         trigger: 'axis'
-    //       },
-    //       series
-    //     }
-    //     myChart.setOption(option)
-    //   }
-    // }
+        const myChart = echarts.init(this._root, 'main')
+        const option = {
+          xAxis: {
+            type: 'category',
+            data: categoryData
+          },
+          yAxis: {
+            type: 'value'
+          },
+          tooltip: {
+            trigger: 'axis'
+          },
+          series
+        }
+        myChart.setOption(option)
+      }
+    }
   
     customElements.define('com-sap-sample-echarts-line_chart', LineSamplePrepped)
   })()
