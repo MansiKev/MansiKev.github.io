@@ -100,6 +100,7 @@ const parseMetadata = metadata => {
       myChart.setOption(option)
     }
   }
+  
 
   customElements.define('com-sap-sample-echarts-line_chart', LineSamplePrepped)
 })();
