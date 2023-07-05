@@ -67,16 +67,22 @@ const parseMetadata = metadata => {
         }
       })
 
-      data.forEach(row => {
-        // dimension
-        categoryData.push(dimensions.map(dimension => {
-          return row[dimension.key].label
-        }).join('/'))
-        // measures
-        series.forEach(series => {
-          series.data.push(row[series.key].raw)
-        })
-      })
+      // data.forEach(row => {
+      //   // dimension
+      //   categoryData.push(dimensions.map(dimension => {
+      //     return row[dimension.key].label
+      //   }).join('/'))
+      //   // measures
+      //   series.forEach(series => {
+      //     series.data.push(row[series.key].raw)
+      //   })
+      // })
+
+      data.forEach(row =>{
+        
+      }
+
+      )
 
       console.log(data);
       am4core.useTheme(am4themes_animated);
