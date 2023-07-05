@@ -15,7 +15,7 @@ var getScriptPromisify = (src) => {
             this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(template.content.cloneNode(true));
 
-            this._root = this._shadowRoot.getElementById("chart_div");
+            this._root = this._shadowRoot.getElementById("chartdiv");
             this._props = {};
             this.render()
         }
@@ -39,7 +39,7 @@ var getScriptPromisify = (src) => {
 			var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset =arg;
             console.log(resultset);
-            
+             
             
             chart.data = [{
                 "date": "2012-07-27",
