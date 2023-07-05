@@ -40,7 +40,7 @@ var getScriptPromisify = (src) => {
             resultset.forEach(e=>{
                 var rawvalue=e["MeasureDimension"]["rawvalue"];
                 var odate=e["Order_Date"].id;
-                data.push({date:odate, value:rawvalue})
+                data.push({"date":odate, "value":rawvalue})
 
             })
             console.log(data);
