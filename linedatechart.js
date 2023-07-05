@@ -652,7 +652,8 @@ const parseMetadata = metadata => {
       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
       // Create series
-      // var series = chart.series.push(new am4charts.LineSeries());
+      // var series = 
+      chart.series.push(new am4charts.LineSeries());
    
       series.valueY = "value";
       series.dateX = "date";
