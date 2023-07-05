@@ -653,9 +653,6 @@ const parseMetadata = metadata => {
 
       // Create series
        chart.series.push(new am4charts.LineSeries());
-       var categoryXAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-       categoryXAxis.dataFields.category = "XName";
-       categoryXAxis.tooltip.disabled = true;
    
       series.dataFields.valueY = "value";
       series.dataFields.dateX = "date";
