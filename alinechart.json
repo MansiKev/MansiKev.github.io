@@ -1,0 +1,40 @@
+{
+	"id": "com.sap.sample.chart",
+	"version": "1.0.1",
+	"name": "Amchart Linecahrt",
+	"description": "LineChart",
+	"newInstancePrefix": "linechart",
+	"icon": "",
+	"vendor": "Mansi",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-sap-sample-chart",
+			"url": "",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"width": {
+			"type": "integer",
+			"default": 600
+		},
+		"height": {
+			"type": "integer",
+			"default": 600
+		}
+	},
+	"methods": {
+		"render": {
+			"description": "To Plot Chart"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the  Chart."
+		}
+	}
+}
