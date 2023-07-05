@@ -19,11 +19,11 @@ var getScriptPromisify = (src) => {
             this.render()
         }
         onCustomWidgetResize(width, height) {
-            this.render()
+            // this.render()
         }
 
         onCustomWidgetAfterUpdate(changedProps) {
-            this.render()
+            // this.render()
         }
         async render(arg) {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
