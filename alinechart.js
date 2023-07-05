@@ -16,15 +16,10 @@ var getScriptPromisify = (src) => {
             this._shadowRoot.appendChild(template.content.cloneNode(true));
             this._root = this._shadowRoot.getElementById("chartdiv");
             this._props = {};
-            this.render()
         }
-        onCustomWidgetResize(width, height) {
-            // this.render()
-        }
+        onCustomWidgetResize(width, height) {}
 
-        onCustomWidgetAfterUpdate(changedProps) {
-            // this.render()
-        }
+        onCustomWidgetAfterUpdate(changedProps) {}
         async render(arg) {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
