@@ -662,5 +662,5 @@ var getScriptPromisify = (src) => {
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
 
-})();my project file
+})();
 
