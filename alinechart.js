@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
 			// Create chart instance
 			var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset=arg;
-            console.log(resultset[0].order_date.id);
+            console.log(resultset);
             chart.data = [{
                 "date": "2012-07-27",
                 "value": 13
