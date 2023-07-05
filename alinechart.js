@@ -29,6 +29,8 @@ var getScriptPromisify = (src) => {
         }
         async render(arg) {
             
+
+            
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
