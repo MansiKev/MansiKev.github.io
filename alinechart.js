@@ -18,7 +18,7 @@ var getScriptPromisify = (src) => {
             this._props = {};
         }
         onCustomWidgetResize(width, height) {}
-
+        
         onCustomWidgetAfterUpdate(changedProps) {}
 
         async render(arg) {
