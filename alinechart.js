@@ -14,7 +14,6 @@ var getScriptPromisify = (src) => {
             super();
             this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(template.content.cloneNode(true));
-
             this._root = this._shadowRoot.getElementById("chartdiv");
             this._props = {};
             this.render()
@@ -27,8 +26,6 @@ var getScriptPromisify = (src) => {
             this.render()
         }
         async render(arg) {
-      
-
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
