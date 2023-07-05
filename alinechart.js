@@ -30,7 +30,7 @@ var getScriptPromisify = (src) => {
         async render(arg) {
             
 
-            
+
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
@@ -39,7 +39,7 @@ var getScriptPromisify = (src) => {
 
 			// Create chart instance
 			var chart = am4core.create(this._root, am4charts.XYChart);
-            var resultset=arg;
+            var resultset  =arg;
             console.log(resultset);
             chart.data = [{
                 "date": "2012-07-27",
