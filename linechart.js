@@ -89,7 +89,7 @@ const parseMetadata = metadata => {
           type: 'category',
           data: categoryData
         },
-        yAxis: {
+        yAxis: { 
           type: 'value'
         },
         tooltip: {
