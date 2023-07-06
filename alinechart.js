@@ -33,16 +33,13 @@ var getScriptPromisify = (src) => {
             var resultset =arg;
             var data=[];
             console.log(resultset);
-            // resultset.forEach(e=>{
-            //     // var b={};
-            //     // b["date"]= new Date(e["Order_Date"].id);
-            //     // b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
-            //     // data.push(b);
-            // })
-                for(var i=0;i<resultset.length;i++){
-                resultset[i]["Order_Date"].id=["date"];
-                resultset[i]["@MeasureDimension"].description=resultset[i]["@MeasureDimension"].rawValue;
-                }
+            resultset.forEach(e=>{
+                var b={};
+                b["date"]= new Date(e["Order_Date"].id);
+                b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
+                data.push(b);
+            })
+                
             console.log(data);
             chart.data=data;
               // Set input format for the dates
