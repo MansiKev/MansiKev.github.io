@@ -39,7 +39,7 @@ var getScriptPromisify = (src) => {
             //     // b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
             //     // data.push(b);
             // })
-                for(var i=0;i<resultset;i++){
+                for(var i=0;i<resultset.length;i++){
                 resultset[i]["Order_Date"].id=["date"];
         
                 }
