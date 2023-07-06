@@ -38,7 +38,10 @@ var getScriptPromisify = (src) => {
                 b["date"]= new Date(e["Order_Date"].id);
                 b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
                 data.push(b);
+                
+
             })
+            console.log(b);
             console.log(data);
             chart.data=data;
               // Set input format for the dates
