@@ -47,7 +47,7 @@ var getScriptPromisify = (src) => {
                             date:resultset[i]["Order_Date"].id,
                             value:resultset[i]["@MeasureDimension"]["rawValue"],
                             value1: resultset[i + 1]["@MeasureDimension"]["rawValue"],   
-                    });
+                     });
                     }
                 }
             console.log(data);
@@ -61,7 +61,7 @@ var getScriptPromisify = (src) => {
               
               // Create series
               var series = chart.series.push(new am4charts.LineSeries());
-              series.dataFields.valueY = "value";
+              series.dataFields.valueY = "Sales";
               series.dataFields.dateX = "date";
               series.tooltipText = "{value}"
               series.strokeWidth = 2;
