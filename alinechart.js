@@ -41,10 +41,10 @@ var getScriptPromisify = (src) => {
             // })
             var m=[];
                 for(var i=0;i<resultset.length;i++){
-                    if(m.indexOf (new Date(resultset[i]["Order_Date"].id))===-1){
+                    if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
                         m.push(resultset[i]["Order_Date"].id);
                         data.push({
-                            date:resultset[i]["Order_Date"].id,
+                            date:new Date(resultset[i]["Order_Date"].id),
                             value:resultset[i]["@MeasureDimension"]["rawValue"],
                             value1: resultset[i + 1]["@MeasureDimension"]["rawValue"],   
                      });
