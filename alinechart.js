@@ -41,7 +41,7 @@ var getScriptPromisify = (src) => {
             // })
             var m=[];
                 for(var i=0;i<resultset.length;i++){
-                    if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
+                    if(m.indexOf (new Date(resultset[i]["Order_Date"].id))===-1){
                         m.push(resultset[i]["Order_Date"].id);
                         data.push({
                             date:resultset[i]["Order_Date"].id,
@@ -61,7 +61,7 @@ var getScriptPromisify = (src) => {
               
               // Create series
               var series = chart.series.push(new am4charts.LineSeries());
-              series.dataFields.valueY = "Sales";
+              series.dataFields.valueY = "value";
               series.dataFields.dateX = "date";
               series.tooltipText = "{value}"
               series.strokeWidth = 2;
