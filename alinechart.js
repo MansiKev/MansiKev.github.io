@@ -50,8 +50,6 @@ var getScriptPromisify = (src) => {
                     });
                     }
                 }
-               
-            console.log(m);
             console.log(data);
             chart.data=data;
               // Set input format for the dates
