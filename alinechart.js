@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
                 b["date"]= new Date(e["Order_Date"].id);
                 data.push(b);
                 if(b[0]["date"]==b[1]["date"]){
-                   console.log( b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"]);
+                   console.log(b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"]);
                 }
                 b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
                 data.push(b);
