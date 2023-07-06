@@ -53,11 +53,7 @@ var getScriptPromisify = (src) => {
             //         }
             //     }
 
-            var m={};
-            for(var i=0;i<resultset.length;i++){
                 
-                
-            }
             console.log(data);
             chart.data=data;
               // Set input format for the dates
