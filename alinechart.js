@@ -42,7 +42,7 @@ var getScriptPromisify = (src) => {
             var m=[];
                 for(var i=0;i<resultset.length;i++){
                     if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
-                        // m.push(resultset[i]["Order_Date"].id);
+                        m.push(resultset[i]["Order_Date"].id);
                         data.push({
                             date:resultset[i]["Order_Date"].id,
                             value:resultset[i]["@MeasureDimension"]["rawValue"],
@@ -51,7 +51,7 @@ var getScriptPromisify = (src) => {
                     }
                 }
                
-            // console.log(m);
+            console.log(m);
             console.log(data);
             chart.data=data;
               // Set input format for the dates
