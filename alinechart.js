@@ -34,12 +34,16 @@ var getScriptPromisify = (src) => {
             var data=[];
             console.log(resultset);
             resultset.forEach(e=>{
-                var b={};
-                b["date"]= new Date(e["Order_Date"].id);
-                b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
-                data.push(b);
-                console.log(b);
-
+                // var b={};
+                // b["date"]= new Date(e["Order_Date"].id);
+                // b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
+                // data.push(b);
+                for(var i=0;i<resultset;i++){
+                    resultset[i]["date"]= new Date(e["Order_Date"].id);
+                    data.push(resultset);
+                    console.log(resultset);
+                }
+                 
             })
             
             console.log(data);
