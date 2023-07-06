@@ -44,7 +44,7 @@ var getScriptPromisify = (src) => {
                 resultset[i]["@MeasureDimension"].description=resultset[i]["@MeasureDimension"].rawValue;
                 }
                  
-            
+            console.log(resultset);
             console.log(data);
             chart.data=data;
               // Set input format for the dates
