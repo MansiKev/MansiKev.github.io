@@ -39,17 +39,24 @@ var getScriptPromisify = (src) => {
             //     // b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
             //     // data.push(b);
             // })
-            var m=[];
-                for(var i=0;i<resultset.length;i++){
-                    if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
-                        m.push(resultset[i]["Order_Date"].id);
-                        data.push({
-                            date:new Date(resultset[i]["Order_Date"].id),
-                            value:resultset[i]["@MeasureDimension"]["rawValue"],
-                            value1: resultset[i + 1]["@MeasureDimension"]["rawValue"],   
-                     });
-                    }
-                }
+
+            
+            // var m=[];
+            //     for(var i=0;i<resultset.length;i++){
+            //         if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
+            //             m.push(resultset[i]["Order_Date"].id);
+            //             data.push({
+            //                 date:new Date(resultset[i]["Order_Date"].id),
+            //                 value:resultset[i]["@MeasureDimension"]["rawValue"],
+            //                 value1: resultset[i + 1]["@MeasureDimension"]["rawValue"],   
+            //          });
+            //         }
+            //     }
+
+            var m={};
+            for(var i=0;i<resultset.length;i++){
+                
+            }
             console.log(data);
             chart.data=data;
               // Set input format for the dates
