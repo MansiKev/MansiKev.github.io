@@ -42,7 +42,7 @@ var getScriptPromisify = (src) => {
             var m=[];
                 for(var i=0;i<resultset.length;i++){
                     if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
-                        m.push(resultset[i]["Order_Date"].id);
+                        // m.push(resultset[i]["Order_Date"].id);
                         data.push({
                             date:resultset[i]["Order_Date"].id,
                             value:resultset[i]["@MeasureDimension"]["rawValue"],
@@ -51,7 +51,7 @@ var getScriptPromisify = (src) => {
                     }
                 }
                
-            console.log(m)
+            // console.log(m);
             console.log(data);
             chart.data=data;
               // Set input format for the dates
@@ -63,7 +63,7 @@ var getScriptPromisify = (src) => {
               
               // Create series
               var series = chart.series.push(new am4charts.LineSeries());
-              series.dataFields.valueY = "Sales";
+              series.dataFields.valueY = "value";
               series.dataFields.dateX = "date";
               series.tooltipText = "{value}"
               series.strokeWidth = 2;
@@ -88,9 +88,9 @@ var getScriptPromisify = (src) => {
               bullethover.properties.scale = 1.3;
               
               var series1 = chart.series.push(new am4charts.LineSeries());
-              series1.dataFields.valueY = "Profit";
+              series1.dataFields.valueY = "value1";
               series1.dataFields.dateX = "date";
-              series1.tooltipText = "{value}"
+              series1.tooltipText = "{value1}"
               series1.strokeWidth = 2;
               series1.minBulletDistance = 15;
               
