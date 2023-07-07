@@ -66,7 +66,7 @@ var getScriptPromisify = (src) => {
               
               // Create series
               var series = chart.series.push(new am4charts.LineSeries());
-              series.dataFields.valueY = "value";
+              series.dataFields.valueY = "Sales";
               series.dataFields.dateX = "date";
               series.tooltipText = "{value}"
               series.strokeWidth = 2;
@@ -91,7 +91,7 @@ var getScriptPromisify = (src) => {
               bullethover.properties.scale = 1.3;
               
               var series1 = chart.series.push(new am4charts.LineSeries());
-              series1.dataFields.valueY = "value1";
+              series1.dataFields.valueY = "Profit";
               series1.dataFields.dateX = "date";
               series1.tooltipText = "{value1}"
               series1.strokeWidth = 2;
