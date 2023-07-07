@@ -59,10 +59,12 @@ var getScriptPromisify = (src) => {
              for(var i=0;i<resultset.length;i++){
                 var b= {};
                 b[resultset[i]["Order_Date"].id];
-                b[resultset[i]["MeasureDimension"]["description"]=resultset[i]["MeasureDimension"]["rawValue"]]
+                b[resultset[i]["MeasureDimension"]["description"]=resultset[i]["MeasureDimension"]["rawValue"]];
                 a.push(b);
                 break;
+                
              }
+
 
 
             chart.data=data;
