@@ -63,9 +63,9 @@ var getScriptPromisify = (src) => {
                 }
                 else {
                     var b = {};
-                    b[resultset[i]["Order_Date"].id];
+                    b["date"] = new Date(resultset[i]["Order_Date"].id);
                     b[resultset[i]["@MeasureDimension"]["description"]] = resultset[i]["@MeasureDimension"]["rawValue"];
-                    a.push(b);
+                    a[resultset[i]["Order_Date"].id] = b;
                 }
                 // break;
 
