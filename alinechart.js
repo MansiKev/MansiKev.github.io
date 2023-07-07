@@ -81,7 +81,7 @@ var getScriptPromisify = (src) => {
             // Create series
             for(var i=0;i<measures.length;i++){
                 var series = chart.series.push(new am4charts.LineSeries());
-                series.dataFields.valueY = i;
+                series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "{value}"
                 series.strokeWidth = 2;
