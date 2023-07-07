@@ -41,7 +41,7 @@ var getScriptPromisify = (src) => {
                 data.push(b);
                 
             })
-            data.find()
+            // data.find()
             console.log(data);
             
             // var m=[];
