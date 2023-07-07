@@ -41,7 +41,6 @@ var getScriptPromisify = (src) => {
             //     data.push(b);
 
             // })
-            console.log(data);
 
             // var m=[];
             //     for(var i=0;i<resultset.length;i++){
@@ -73,6 +72,7 @@ var getScriptPromisify = (src) => {
 
 
             console.log(a);
+            data.push(a);
             chart.data = data;
             // Set input format for the dates
             chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
