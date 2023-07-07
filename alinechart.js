@@ -21,7 +21,7 @@ var getScriptPromisify = (src) => {
         
         onCustomWidgetAfterUpdate(changedProps) {}
 
-        async render(arg) {
+        async render(arg,measures) {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
 			await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
@@ -33,15 +33,14 @@ var getScriptPromisify = (src) => {
             var resultset =arg;
             var data=[];
             console.log(resultset);
-            resultset.forEach(e=>{
-                var b={};
+            // resultset.forEach(e=>{
+            //     var b={};
                 
-                b["date"]= new Date(e["Order_Date"].id);
-                b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
-                data.push(b);
+            //     b["date"]= new Date(e["Order_Date"].id);
+            //     b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
+            //     data.push(b);
                 
-            })
-            // data.find()
+            // })
             console.log(data);
             
             // var m=[];
@@ -55,6 +54,16 @@ var getScriptPromisify = (src) => {
             //          });
             //         }
             //     }
+     
+             var a={};
+             for(var i=0;i<resultset.length;i++){
+                var b= {};
+                b[resultset[i]["Order_Date"].id];
+                b[resultset[i]["MeasureDimension"]["description"]=resultset[i]["MeasureDimension"]["rawValue"]]
+                a.push(b);
+                break;
+             }
+
 
             chart.data=data;
               // Set input format for the dates
