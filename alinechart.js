@@ -36,10 +36,11 @@ var getScriptPromisify = (src) => {
             resultset.forEach(e=>{
                 var b={};
                 for(var i=0;i<resultset.length;i++){
-                Object.assign(b,{date:resultset[i]["Order_Date"].id,value:resultset[i+1]["@MeasureDimension"]["rawValue"]})
+                Object.assign(b,{date:resultset[i]["Order_Date"].id,value:resultset[i]["@MeasureDimension"]["rawValue"]})
                 b["date"]= new Date(e["Order_Date"].id);
                 b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
                 }
+                console.log(Object);
                 data.push(b);
             })
 
