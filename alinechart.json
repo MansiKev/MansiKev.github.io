@@ -34,7 +34,12 @@
                     "name":"resultset",
                     "type":"any",
                     "description":"plot to chart"
-                }
+                },
+				{
+					"name":"measures",
+					"type":"string[]",
+					"description":"Add to measure"
+				}
             ]
 		}
 	},

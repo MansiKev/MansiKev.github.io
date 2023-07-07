@@ -21,7 +21,7 @@ var getScriptPromisify = (src) => {
 
         onCustomWidgetAfterUpdate(changedProps) { }
 
-        async render(arg, measures) {
+        async render(arg,arg1) {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
@@ -31,7 +31,8 @@ var getScriptPromisify = (src) => {
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
-            var data = [];
+            var measures = arg1;
+            // var data = [];
             console.log(resultset);
             // resultset.forEach(e=>{
             //     var b={};
@@ -78,56 +79,32 @@ var getScriptPromisify = (src) => {
             var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
             // Create series
-            var series = chart.series.push(new am4charts.LineSeries());
-            series.dataFields.valueY = "Sales";
-            series.dataFields.dateX = "date";
-            series.tooltipText = "{value}"
-            series.strokeWidth = 2;
-            series.minBulletDistance = 15;
-
-            // Drop-shaped tooltips
-            series.tooltip.background.cornerRadius = 20;
-            series.tooltip.background.strokeOpacity = 0;
-            series.tooltip.pointerOrientation = "vertical";
-            series.tooltip.label.minWidth = 40;
-            series.tooltip.label.minHeight = 40;
-            series.tooltip.label.textAlign = "middle";
-            series.tooltip.label.textValign = "middle";
-
-            // Make bullets grow on hover
-            var bullet = series.bullets.push(new am4charts.CircleBullet());
-            bullet.circle.strokeWidth = 2;
-            bullet.circle.radius = 4;
-            bullet.circle.fill = am4core.color("#fff");
-
-            var bullethover = bullet.states.create("hover");
-            bullethover.properties.scale = 1.3;
-
-            var series1 = chart.series.push(new am4charts.LineSeries());
-            series1.dataFields.valueY = "Profit";
-            series1.dataFields.dateX = "date";
-            series1.tooltipText = "{value1}"
-            series1.strokeWidth = 2;
-            series1.minBulletDistance = 15;
-
-            // Drop-shaped tooltips
-            series1.tooltip.background.cornerRadius = 20;
-            series1.tooltip.background.strokeOpacity = 0;
-            series1.tooltip.pointerOrientation = "vertical";
-            series1.tooltip.label.minWidth = 40;
-            series1.tooltip.label.minHeight = 40;
-            series1.tooltip.label.textAlign = "middle";
-            series1.tooltip.label.textValign = "middle";
-
-            // Make bullets grow on hover
-            var bullet1 = series1.bullets.push(new am4charts.CircleBullet());
-            bullet1.circle.strokeWidth = 2;
-            bullet1.circle.radius = 4;
-            bullet1.circle.fill = am4core.color("#fff");
-
-            var bullethove1 = bullet1.states.create("hover");
-            bullethove1.properties.scale = 1.3;
-
+            for(var i=0;i<measures.length;i++){
+                var series = chart.series.push(new am4charts.LineSeries());
+                series.dataFields.valueY = i;
+                series.dataFields.dateX = "date";
+                series.tooltipText = "{value}"
+                series.strokeWidth = 2;
+                series.minBulletDistance = 15;
+    
+                // Drop-shaped tooltips
+                series.tooltip.background.cornerRadius = 20;
+                series.tooltip.background.strokeOpacity = 0;
+                series.tooltip.pointerOrientation = "vertical";
+                series.tooltip.label.minWidth = 40;
+                series.tooltip.label.minHeight = 40;
+                series.tooltip.label.textAlign = "middle";
+                series.tooltip.label.textValign = "middle";
+    
+                // Make bullets grow on hover
+                var bullet = series.bullets.push(new am4charts.CircleBullet());
+                bullet.circle.strokeWidth = 2;
+                bullet.circle.radius = 4;
+                bullet.circle.fill = am4core.color("#fff");
+    
+                var bullethover = bullet.states.create("hover");
+                bullethover.properties.scale = 1.3;
+            }
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.behavior = "panXY";
