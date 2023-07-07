@@ -37,7 +37,6 @@ var getScriptPromisify = (src) => {
                 var b={};
                 
                 b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
-                b["date"]= new Date(e["Order_Date"].id);
                 data.push(b);
             })
 
