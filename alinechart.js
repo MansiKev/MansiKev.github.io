@@ -83,6 +83,7 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
+
                 series.tooltipText = "{value}"
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
@@ -106,20 +107,20 @@ var getScriptPromisify = (src) => {
                 bullethover.properties.scale = 1.3;
             }
             // Make a panning cursor
-            chart.cursor = new am4charts.XYCursor();
-            chart.cursor.behavior = "panXY";
-            chart.cursor.xAxis = dateAxis;
-            chart.cursor.snapToSeries = series;
+            // chart.cursor = new am4charts.XYCursor();
+            // chart.cursor.behavior = "panXY";
+            // chart.cursor.xAxis = dateAxis;
+            // chart.cursor.snapToSeries = series;
 
             // Create vertical scrollbar and place it before the value axis
-            chart.scrollbarY = new am4core.Scrollbar();
-            chart.scrollbarY.parent = chart.leftAxesContainer;
-            chart.scrollbarY.toBack();
+            // chart.scrollbarY = new am4core.Scrollbar();
+            // chart.scrollbarY.parent = chart.leftAxesContainer;
+            // chart.scrollbarY.toBack();
 
             // Create a horizontal scrollbar with previe and place it underneath the date axis
-            chart.scrollbarX = new am4charts.XYChartScrollbar();
-            chart.scrollbarX.series.push(series);
-            chart.scrollbarX.parent = chart.bottomAxesContainer;
+            // chart.scrollbarX = new am4charts.XYChartScrollbar();
+            // chart.scrollbarX.series.push(series);
+            // chart.scrollbarX.parent = chart.bottomAxesContainer;
 
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
