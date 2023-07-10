@@ -85,9 +85,9 @@ var getScriptPromisify = (src) => {
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX} / y:{valueY}";
                 console.log(measures);
-                // series.tooltipText = "{value}";
-                // series.strokeWidth = 2;
-                // series.minBulletDistance = 15;
+                series.tooltipText = "{value}";
+                series.strokeWidth = 2;
+                series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
                 // series.tooltip.background.strokeOpacity = 0;
@@ -131,8 +131,8 @@ var getScriptPromisify = (src) => {
                 return dataItem;
               }
 
-            // dateAxis.start = 0.79;
-            // dateAxis.keepSelection = true;
+            dateAxis.start = 0.79;
+            dateAxis.keepSelection = true;
         }
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
