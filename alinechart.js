@@ -83,7 +83,6 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-
                 series.tooltipText = "{value}"
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
