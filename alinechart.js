@@ -122,8 +122,8 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
-            
-            am4charts.ValueAxis.prototype.getSeriesDataItem = function(series, position) {
+
+            dateAxis.getSeriesDataItem = function(series, position) {
                 var key = this.axisFieldName + this.axisLetter;
                 var value = this.positionToValue(position);
                 const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function(x) {
