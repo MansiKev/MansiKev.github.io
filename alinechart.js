@@ -84,7 +84,7 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 
-                series.tooltipText = "{value}";
+                series.tooltipText = "abc";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 console.log(measures);
