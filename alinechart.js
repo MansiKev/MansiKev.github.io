@@ -89,7 +89,7 @@ var getScriptPromisify = (src) => {
                 series.minBulletDistance = 15;
     
                 // Drop-shaped tooltips
-                series.template.tooltipText=measures[i].rawValue;
+                series.tooltipText="abc";
                 series.tooltip.background.cornerRadius = 20;
                 series.tooltip.background.strokeOpacity = 0;
                 series.tooltip.pointerOrientation = "vertical";
