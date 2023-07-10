@@ -104,7 +104,7 @@ var getScriptPromisify = (src) => {
                 bullet.circle.fill = am4core.color("#fff");
     
                 var bullethover = bullet.states.create("hover");
-                bullethover.roperties.scale = 1.3;
+                bullethover.properties.scale = 1.3;
             }
             
             // Make a panning cursor
