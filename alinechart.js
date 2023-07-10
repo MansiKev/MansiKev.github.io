@@ -83,7 +83,6 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                
                 series.tooltipText = "abc";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
@@ -106,6 +105,7 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
             }
+            series.tooltipText = "abc";
             // Make a panning cursor
             // chart.cursor = new am4charts.XYCursor();
             // chart.cursor.behavior = "panXY";
