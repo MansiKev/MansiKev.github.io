@@ -118,7 +118,6 @@ var getScriptPromisify = (src) => {
             chart.scrollbarY.parent = chart.leftAxesContainer;
             chart.scrollbarY.toBack();
         
-
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
