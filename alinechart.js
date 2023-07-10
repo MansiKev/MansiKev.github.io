@@ -84,7 +84,7 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "x:{dateX} / y:{valueY}";
-                series.tooltipText = "{value}";
+                // series.tooltipText = "{value}";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 console.log(measures);
@@ -122,6 +122,15 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
+
+            dateAxis.getSeriesDataItem = function(series, position) {
+                var key = this.axisFieldName + this.axisLetter;
+                var value = this.positionToValue(position);
+                const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function(x) {
+                  return x[key] ? x[key] : undefined;
+                }, "any"));
+                return dataItem;
+              }
 
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
