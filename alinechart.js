@@ -72,7 +72,7 @@ var getScriptPromisify = (src) => {
             console.log(a);
             chart.data = Object.values(a);
             // Set input format for the dates
-            chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+            // chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 
             // Create axes
             var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -99,9 +99,9 @@ var getScriptPromisify = (src) => {
     
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
-                // bullet.circle.strokeWidth = 2;
-                // bullet.circle.radius = 4;
-                // bullet.circle.fill = am4core.color("#fff");
+                bullet.circle.strokeWidth = 2;
+                bullet.circle.radius = 4;
+                bullet.circle.fill = am4core.color("#fff");
     
             //     var bullethover = bullet.states.create("hover");
             //     bullethover.properties.scale = 1.3;
@@ -132,8 +132,8 @@ var getScriptPromisify = (src) => {
                 return dataItem;
               }
 
-            dateAxis.start = 0.79;
-            dateAxis.keepSelection = true;
+            // dateAxis.start = 0.79;
+            // dateAxis.keepSelection = true;
         }
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
