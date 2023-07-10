@@ -83,10 +83,10 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                series.tooltipText = measures[i].description;
-                series.strokeWidth = 2;
+                series.tooltipText = "{measures[i].description}";
+                series.strokeWidth = 2;s
                 series.minBulletDistance = 15;
-                console.log(measures[i].description);
+                console.log("{measures[i].description}");
                 // Drop-shaped tooltips
                 series.tooltip.background.cornerRadius = 20;
                 series.tooltip.background.strokeOpacity = 0;
