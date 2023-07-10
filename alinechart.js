@@ -105,7 +105,7 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
             }
-            series.tooltipText = "abc";
+            
             // Make a panning cursor
             // chart.cursor = new am4charts.XYCursor();
             // chart.cursor.behavior = "panXY";
