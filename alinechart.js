@@ -115,13 +115,12 @@ var getScriptPromisify = (src) => {
 
             // Create vertical scrollbar and place it before the value axis
             chart.scrollbarY = new am4core.Scrollbar();
-            // chart.scrollbarY.parent = chart.leftAxesContainer;
-            // chart.scrollbarY.toBack();
+            chart.scrollbarY.parack();
 
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
-            // chart.scrollbarX.series.push(series);
-            // chart.scrollbarX.parent = chart.bottomAxesContainer;
+            chart.scrollbarX.series.push(series);
+            chart.scrollbarX.parent = chart.bottomAxesContainer;
 
             dateAxis.getSeriesDataItem = function(series, position) {
                 var key = this.axisFieldName + this.axisLetter;
