@@ -89,13 +89,13 @@ var getScriptPromisify = (src) => {
                 series.minBulletDistance = 15;
                 console.log(measures);
                 // Drop-shaped tooltips
-                series.tooltip.background.cornerRadius = 20;
-                series.tooltip.background.strokeOpacity = 0;
-                series.tooltip.pointerOrientation = "vertical";
-                series.tooltip.label.minWidth = 40;
-                series.tooltip.label.minHeight = 40;
-                series.tooltip.label.textAlign = "middle";
-                series.tooltip.label.textValign = "middle";
+                // series.tooltip.background.cornerRadius = 20;
+                // series.tooltip.background.strokeOpacity = 0;
+                // series.tooltip.pointerOrientation = "vertical";
+                // series.tooltip.label.minWidth = 40;
+                // series.tooltip.label.minHeight = 40;
+                // series.tooltip.label.textAlign = "middle";
+                // series.tooltip.label.textValign = "middle";
     
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
