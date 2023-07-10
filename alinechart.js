@@ -123,15 +123,6 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
 
-            dateAxis.getSeriesDataItem = function(series, position) {
-                var key = this.axisFieldName + this.axisLetter;
-                var value = this.positionToValue(position);
-                const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function(x) {
-                  return x[key] ? x[key] : undefined;
-                }, "any"));
-                return dataItem;
-              }
-
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
         }
