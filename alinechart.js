@@ -84,10 +84,10 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX} / y:{valueY}";
-                // series.tooltipText = "{value}";
-                series.strokeWidth = 2;
-                series.minBulletDistance = 15;
                 console.log(measures);
+                // series.tooltipText = "{value}";
+                // series.strokeWidth = 2;
+                // series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
                 // series.tooltip.background.strokeOpacity = 0;
