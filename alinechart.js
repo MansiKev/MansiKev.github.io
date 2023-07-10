@@ -99,12 +99,12 @@ var getScriptPromisify = (src) => {
     
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
-                bullet.circle.strokeWidth = 2;
-                bullet.circle.radius = 4;
-                bullet.circle.fill = am4core.color("#fff");
+                // bullet.circle.strokeWidth = 2;
+                // bullet.circle.radius = 4;
+                // bullet.circle.fill = am4core.color("#fff");
     
-                var bullethover = bullet.states.create("hover");
-                bullethover.properties.scale = 1.3;
+            //     var bullethover = bullet.states.create("hover");
+            //     bullethover.properties.scale = 1.3;
             }
             
             // Make a panning cursor
