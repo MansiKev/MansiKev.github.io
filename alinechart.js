@@ -72,7 +72,7 @@ var getScriptPromisify = (src) => {
             console.log(a);
             chart.data = Object.values(a);
             // Set input format for the dates
-            // chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+            chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 
             // Create axes
             var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -89,13 +89,13 @@ var getScriptPromisify = (src) => {
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
-                // series.tooltip.background.cornerRadius = 20;
-                // series.tooltip.background.strokeOpacity = 0;
-                // series.tooltip.pointerOrientation = "vertical";
-                // series.tooltip.label.minWidth = 40;
-                // series.tooltip.label.minHeight = 40;
-                // series.tooltip.label.textAlign = "middle";
-                // series.tooltip.label.textValign = "middle";
+                series.tooltip.background.cornerRadius = 20;
+                series.tooltip.background.strokeOpacity = 0;
+                series.tooltip.pointerOrientation = "vertical";
+                series.tooltip.label.minWidth = 40;
+                series.tooltip.label.minHeight = 40;
+                series.tooltip.label.textAlign = "middle";
+                series.tooltip.label.textValign = "middle";
     
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
