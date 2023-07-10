@@ -109,19 +109,19 @@ var getScriptPromisify = (src) => {
             
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
-            chart.cursor.behavior = "panXY";
-            chart.cursor.xAxis = dateAxis;
-            chart.cursor.snapToSeries = series;
+            // chart.cursor.behavior = "panXY";
+            // chart.cursor.xAxis = dateAxis;
+            // chart.cursor.snapToSeries = series;
 
             // Create vertical scrollbar and place it before the value axis
             chart.scrollbarY = new am4core.Scrollbar();
-            chart.scrollbarY.parent = chart.leftAxesContainer;
-            chart.scrollbarY.toBack();
+            // chart.scrollbarY.parent = chart.leftAxesContainer;
+            // chart.scrollbarY.toBack();
 
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
-            chart.scrollbarX.series.push(series);
-            chart.scrollbarX.parent = chart.bottomAxesContainer;
+            // chart.scrollbarX.series.push(series);
+            // chart.scrollbarX.parent = chart.bottomAxesContainer;
 
             dateAxis.getSeriesDataItem = function(series, position) {
                 var key = this.axisFieldName + this.axisLetter;
