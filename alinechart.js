@@ -108,7 +108,7 @@ var getScriptPromisify = (src) => {
                 // series2.tooltipText="Date:{dateX} \n value:{valueY}";
                 series2.yAxis=valueAxis2;
             }
-            console.log(measures);
+            console.log(measures[1]);
 
            
             // Make a panning cursor
