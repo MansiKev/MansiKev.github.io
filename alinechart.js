@@ -18,7 +18,7 @@ var getScriptPromisify = (src) => {
             this._props = {};
         }
 
-        async connectedCallback(){
+        async connectedCallback() {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
@@ -29,9 +29,9 @@ var getScriptPromisify = (src) => {
 
         onCustomWidgetAfterUpdate(changedProps) { }
 
-        async render(arg,arg1) {            
+        async render(arg, arg1) {
 
-            
+
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
@@ -74,11 +74,11 @@ var getScriptPromisify = (src) => {
             var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
             var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
-            valueAxis2.renderer.opposite=true;
-            valueAxis2.syncWithAxis=valueAxis;
+            valueAxis2.renderer.opposite = true;
+            valueAxis2.syncWithAxis = valueAxis;
             // Create series
-            for(var i=0;i<measures.length;i++){
-                
+            for (var i = 0; i < measures.length; i++) {
+
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
@@ -93,25 +93,22 @@ var getScriptPromisify = (src) => {
                 series.tooltip.label.minHeight = 40;
                 series.tooltip.label.textAlign = "middle";
                 series.tooltip.label.textValign = "middle";
-    
+
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
                 bullet.circle.strokeWidth = 2;
                 bullet.circle.radius = 4;
                 bullet.circle.fill = am4core.color("#fff");
-    
+
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
-                var series2=chart.series.push(new am4charts.LineSeries());
-                series2.dataFields.valueY="[Account].[parentId].&[Discount]";
-                series2.dataFields.dateX="date";
-                // series2.tooltipText="Date:{dateX} \n value:{valueY}";
-                series2.yAxis=valueAxis2;
-                  console.log(measures);
+                var series2 = chart.series.push(new am4charts.LineSeries());
+                series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
+                series2.dataFields.dateX = "date";
+                series2.yAxis = valueAxis2;
             }
-          
 
-           
+
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             // chart.cursor.behavior = "panXY";
@@ -122,20 +119,20 @@ var getScriptPromisify = (src) => {
             chart.scrollbarY = new am4core.Scrollbar();
             chart.scrollbarY.parent = chart.leftAxesContainer;
             chart.scrollbarY.toBack();
-        
+
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
 
-            dateAxis.getSeriesDataItem = function(series, position) {
+            dateAxis.getSeriesDataItem = function (series, position) {
                 var key = this.axisFieldName + this.axisLetter;
                 var value = this.positionToValue(position);
-                const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function(x) {
-                  return x[key] ? x[key] : undefined;
+                const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function (x) {
+                    return x[key] ? x[key] : undefined;
                 }, "any"));
                 return dataItem;
-              }
+            }
 
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
