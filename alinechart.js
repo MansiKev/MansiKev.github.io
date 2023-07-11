@@ -102,7 +102,13 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
             }
-            
+            for(var i=0;i<measures.length;i++){
+                var series2 = chart.series.push(new am4charts.LineSeries());
+                series2.dataFields.valueY = measures[2];
+                series2.dataFields.dateX = "date";
+                series2.tooltipText = "Date:{dateX} \n Value:{valueY}";
+        
+            }
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             // chart.cursor.behavior = "panXY";
