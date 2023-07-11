@@ -34,14 +34,6 @@ var getScriptPromisify = (src) => {
             var measures = arg1;
             // var data = [];
             console.log(resultset);
-            // resultset.forEach(e=>{
-            //     var b={};
-
-            //     b["date"]= new Date(e["Order_Date"].id);
-            //     b[e["@MeasureDimension"]["description"]]=e["@MeasureDimension"]["rawValue"];
-            //     data.push(b);
-
-            // })
 
             // var m=[];
             //     for(var i=0;i<resultset.length;i++){
