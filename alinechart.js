@@ -78,7 +78,7 @@ var getScriptPromisify = (src) => {
             valueAxis2.syncWithAxis=valueAxis;
             // Create series
             for(var i=0;i<measures.length;i++){
-                console.log(measures);
+                
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
@@ -108,6 +108,7 @@ var getScriptPromisify = (src) => {
                 // series2.tooltipText="Date:{dateX} \n value:{valueY}";
                 series2.yAxis=valueAxis2;
             }
+            console.log(measures);
 
            
             // Make a panning cursor
