@@ -100,6 +100,8 @@ var getScriptPromisify = (src) => {
                 bullet.circle.radius = 4;
                 bullet.circle.fill = am4core.color("#fff");
 
+                chart.legend = new am4charts.Legend();
+                
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
                 var series2 = chart.series.push(new am4charts.LineSeries());
