@@ -78,6 +78,7 @@ var getScriptPromisify = (src) => {
             valueAxis2.syncWithAxis=valueAxis;
             // Create series
             for(var i=0;i<measures.length;i++){
+                console.log(measures);
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
@@ -101,7 +102,14 @@ var getScriptPromisify = (src) => {
     
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
+                var series2=chart.series.push(new am4charts.LineSeries());
+                series2.dataFields.valueY=measures[2];
+                series2.dataFields.dateX="date";
+                series2.tooltipText="Date:{dateX} \n value:{valueY}";
+                series2.yAxis=valueAxis2;
             }
+
+           
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             // chart.cursor.behavior = "panXY";
