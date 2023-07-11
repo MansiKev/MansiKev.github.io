@@ -105,7 +105,7 @@ var getScriptPromisify = (src) => {
                 var series2=chart.series.push(new am4charts.LineSeries());
                 series2.dataFields.valueY=measures[2];
                 series2.dataFields.dateX="date";
-                series2.tooltipText="Date:{dateX} \n value:{valueY}";
+                // series2.tooltipText="Date:{dateX} \n value:{valueY}";
                 series2.yAxis=valueAxis2;
             }
 
