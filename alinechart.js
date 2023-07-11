@@ -83,7 +83,7 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                series.tooltipText = "Date:{dateX} \n Value:{valueY}";
+                series.tooltipText = "Date:{dateX} / Value:{valueY}";
                 console.log(measures);
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
