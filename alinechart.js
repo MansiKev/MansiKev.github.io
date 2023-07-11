@@ -17,14 +17,17 @@ var getScriptPromisify = (src) => {
             this._root = this._shadowRoot.getElementById("chartdiv");
             this._props = {};
         }
+
+        async connectedCallback(){
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
+        }
         onCustomWidgetResize(width, height) { }
 
         onCustomWidgetAfterUpdate(changedProps) { }
 
-        async render(arg,arg1) {
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
+        async render(arg,arg1) {            
 
             am4core.useTheme(am4themes_animated);
 
