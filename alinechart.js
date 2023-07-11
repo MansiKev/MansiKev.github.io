@@ -108,9 +108,9 @@ var getScriptPromisify = (src) => {
             
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
-            chart.cursor.behavior = "panXY";
-            chart.cursor.xAxis = dateAxis;
-            chart.cursor.snapToSeries = series;
+            // chart.cursor.behavior = "panXY";
+            // chart.cursor.xAxis = dateAxis;
+            // chart.cursor.snapToSeries = series;
 
             // Create vertical scrollbar and place it before the value axis
             chart.scrollbarY = new am4core.Scrollbar();
