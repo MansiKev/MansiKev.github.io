@@ -71,7 +71,9 @@ var getScriptPromisify = (src) => {
 
             // Create axes
             var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis())
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis2.syncWithAxis=valueAxis;
             // Create series
             for(var i=0;i<measures.length;i++){
                 var series = chart.series.push(new am4charts.LineSeries());
