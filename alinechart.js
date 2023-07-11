@@ -91,8 +91,8 @@ var getScriptPromisify = (src) => {
                 series.tooltip.pointerOrientation = "vertical";
                 series.tooltip.label.minWidth = 40;
                 series.tooltip.label.minHeight = 40;
-                series.tooltip.label.textAlign = "middle";
-                series.tooltip.label.textValign = "middle";
+                // series.tooltip.label.textAlign = "middle";
+                // series.tooltip.label.textValign = "middle";
 
                 // Make bullets grow on hover
                 var bullet = series.bullets.push(new am4charts.CircleBullet());
