@@ -103,11 +103,11 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
                 var series2=chart.series.push(new am4charts.LineSeries());
-                series2.dataFields.valueY=measures[1];
+                series2.dataFields.valueY=measures[2];
                 series2.dataFields.dateX="date";
                 // series2.tooltipText="Date:{dateX} \n value:{valueY}";
                 series2.yAxis=valueAxis2;
-                  console.log(measures[1]);
+                  console.log(measures);
             }
           
 
