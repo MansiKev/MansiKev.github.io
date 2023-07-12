@@ -75,13 +75,13 @@ var getScriptPromisify = (src) => {
             var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis2.renderer.opposite = true;
-             // Create series
+            // Create series
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX}\nValue:{valueY}";
-                series.name="abc";
+                series.name="Sales";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
@@ -101,17 +101,17 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
 
-            if(measures[i]==="[Account].[parentId].&[Discount]"){
-              series.dataFields.valueY="[Account].[parentId].&[Discount]";
-              series.yAxis=valueAxis2;
-            }
+                if (measures[i] === "[Account].[parentId].&[Discount]") {
+                    series.dataFields.valueY = "[Account].[parentId].&[Discount]";
+                    series.yAxis = valueAxis2;
+                }
             }
 
             chart.legend = new am4charts.Legend();
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
-            chart.cursor.lineX.disabled=true;
-            chart.cursor.lineY.disabled=true;
+            chart.cursor.lineX.disabled = true;
+            chart.cursor.lineY.disabled = true;
             // chart.cursor.behavior = "panXY";
             // chart.cursor.xAxis = dateAxis;
             // chart.cursor.snapToSeries = series;
