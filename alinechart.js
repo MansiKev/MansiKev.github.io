@@ -132,14 +132,5 @@ var firstapi=1;
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
 
-    async function callapi() {
-        if(firstapi==1){
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
-            firstapi= false;
-        }
-    }
-
 })();
 
