@@ -21,17 +21,14 @@ var getScriptPromisify = (src) => {
         async connectedCallback() {
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
-            am4core.useTheme(am4themes_animated);
-
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");            
         }
         onCustomWidgetResize(width, height) { }
 
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
-
-
+            am4core.useTheme(am4themes_animated);
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
