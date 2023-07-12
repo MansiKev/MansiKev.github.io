@@ -4,7 +4,7 @@ var getScriptPromisify = (src) => {
     })
 }
 
-var firstapi=1;
+var firstapi = 1;
 (function () {
     let template = document.createElement("template");
     template.innerHTML = ` 
@@ -19,7 +19,7 @@ var firstapi=1;
             this._props = {};
         }
 
-        onCustomWidgetBeforeUpdate() {}
+        onCustomWidgetBeforeUpdate() { }
 
         connectedCallback() { }
         onCustomWidgetResize(width, height) { }
@@ -27,20 +27,20 @@ var firstapi=1;
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
-            if(firstapi==1){
+            if (firstapi == 1) {
                 await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
                 await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
                 await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
-                firstapi= false;
+                firstapi = false;
             }
             // am4core.useTheme(am4themes_animated);
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
-           
+
             // var data = [];
-            var measures=Object.keys(arg1);
-            var measure_description=Object.values(arg1);
+            var measures = Object.keys(arg1);
+            var measure_description = Object.values(arg1);
             console.log(measures);
             console.log(measure_description);
             console.log(resultset);
@@ -82,10 +82,8 @@ var firstapi=1;
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis2.renderer.opposite = true;
             // Create series
-           
+
             
-            
-           
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
