@@ -80,6 +80,11 @@ var firstapi=1;
             // Create series
             console.log(measures);
             
+            
+            var measure=Object.keys(measures);
+            var measure_description=Object.values(measures);
+            console.log(measure);
+            console.log(measure_description);
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
