@@ -79,7 +79,7 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX}\nValue:{valueY}";
-                series.name="Sales";
+                series.name="resultset[i][@MeasureDimension][description]";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
