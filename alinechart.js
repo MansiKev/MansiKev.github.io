@@ -104,7 +104,7 @@ var getScriptPromisify = (src) => {
 
             if(measures[i]==="[Account].[parentId].&[Discount]"){
               series.dataFields.valueY="[Account].[parentId].&[Discount]";
-              series.yAxes=valueAxis2;
+              series.yAxis=valueAxis2;
             }
 
                 // var series2 = chart.series.push(new am4charts.LineSeries());
