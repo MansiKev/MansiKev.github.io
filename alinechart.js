@@ -18,11 +18,14 @@ var getScriptPromisify = (src) => {
             this._props = {};
         }
 
-        async connectedCallback() {
+        async oncustomeWidgetBeforeUpdate(){
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
             await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");            
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js"); 
+
         }
+
+         connectedCallback() {}
         onCustomWidgetResize(width, height) { }
 
         onCustomWidgetAfterUpdate(changedProps) { }
