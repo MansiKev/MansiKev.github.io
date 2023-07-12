@@ -24,7 +24,7 @@ var getScriptPromisify = (src) => {
 
         connectedCallback() { }
         onCustomWidgetResize(width, height) { }
-
+        
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
