@@ -81,7 +81,7 @@ var getScriptPromisify = (src) => {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                series.tooltipText = "Date:{dateX} \n Value:{valueY}";
+                series.tooltipText = "Date:{dateX}\nValue:{valueY}";
                 series.name="abc";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
@@ -108,7 +108,7 @@ var getScriptPromisify = (src) => {
                 series2.yAxis = valueAxis2;  
             }
 
-            chart.legend = new am4charts.Legend();
+            // chart.legend = new am4charts.Legend();
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.lineX.disabled=true;
@@ -127,14 +127,14 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
 
-            dateAxis.getSeriesDataItem = function (series, position) {
-                var key = this.axisFieldName + this.axisLetter;
-                var value = this.positionToValue(position);
-                const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function (x) {
-                    return x[key] ? x[key] : undefined;
-                }, "any"));
-                return dataItem;
-            }
+            // dateAxis.getSeriesDataItem = function (series, position) {
+            //     var key = this.axisFieldName + this.axisLetter;
+            //     var value = this.positionToValue(position);
+            //     const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function (x) {
+            //         return x[key] ? x[key] : undefined;
+            //     }, "any"));
+            //     return dataItem;
+            // }
 
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
