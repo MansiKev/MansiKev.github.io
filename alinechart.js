@@ -75,7 +75,7 @@ var getScriptPromisify = (src) => {
             var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis2.renderer.opposite = true;
-            valueAxis2.syncWithAxis = valueAxis;
+            // valueAxis2.syncWithAxis = valueAxis;
             // Create series
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
