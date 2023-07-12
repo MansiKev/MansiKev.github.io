@@ -24,7 +24,7 @@ var getScriptPromisify = (src) => {
 
         connectedCallback() { }
         onCustomWidgetResize(width, height) { }
-        
+
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
@@ -133,6 +133,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
         await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
     }
+    customElements.define("com-sap-sample-alinechart", ALineChart);
 
 })();
 
