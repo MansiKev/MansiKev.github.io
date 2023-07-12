@@ -110,7 +110,8 @@ var getScriptPromisify = (src) => {
             chart.legend = new am4charts.Legend();
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
-            chart.cursor.behavior="none";
+            chart.cursor.lineX.disabled=true;
+            chart.cursor.lineY.disabled=true;
             // chart.cursor.behavior = "panXY";
             // chart.cursor.xAxis = dateAxis;
             // chart.cursor.snapToSeries = series;
