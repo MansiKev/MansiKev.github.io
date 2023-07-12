@@ -101,7 +101,7 @@ var getScriptPromisify = (src) => {
                 bullet.circle.fill = am4core.color("#fff");
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
-
+                
             if(measures[i]==="[Account].[parentId].&[Discount]"){
               series.dataFields.valueY="[Account].[parentId].&[Discount]";
               series.yAxis=valueAxis2;
@@ -126,8 +126,8 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
-            dateAxis.start = 0.79;
-            dateAxis.keepSelection = true;
+            // dateAxis.start = 0.79;
+            // dateAxis.keepSelection = true;
         }
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
