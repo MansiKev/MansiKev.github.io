@@ -55,12 +55,12 @@ var getScriptPromisify = (src) => {
             for (var i = 0; i < resultset.length; i++) {
 
                 if (a[resultset[i]["Order_Date"].id]) {
-                    a[resultset[i]["Order_Date"].id][resultset[i]["@MeasureDimension"]["id"]] = resultset[i]["@MeasureDimension"]["rawValue"];
+                    a[resultset[i]["Order_Date"].id][resultset[i]["@MeasureDimension"]["id"][resultset[i]["@MeasureDimension"]["description"]]] = resultset[i]["@MeasureDimension"]["rawValue"];
                 }
                 else {
                     var b = {};
                     b["date"] = new Date(resultset[i]["Order_Date"].id);
-                    b[resultset[i]["@MeasureDimension"]["id"]] = resultset[i]["@MeasureDimension"]["rawValue"];
+                    b[resultset[i]["@MeasureDimension"]["id"][resultset[i]["@MeasureDimension"]["description"]]] = resultset[i]["@MeasureDimension"]["rawValue"];
                     a[resultset[i]["Order_Date"].id] = b;
                 }
             }
