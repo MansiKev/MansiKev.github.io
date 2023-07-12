@@ -103,7 +103,7 @@ var getScriptPromisify = (src) => {
                 bullethover.properties.scale = 1.3;
 
             if(measures[i]==="[Account].[parentId].&[Discount]"){
-                console.log("mmm");
+               valueAxis2.push("[Account].[parentId].&[Discount]");
             }
 
                 // var series2 = chart.series.push(new am4charts.LineSeries());
