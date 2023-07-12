@@ -4,7 +4,7 @@ var getScriptPromisify = (src) => {
     })
 }
 
-var firstapi;
+var firstapi=1;
 (function () {
     let template = document.createElement("template");
     template.innerHTML = ` 
@@ -20,7 +20,7 @@ var firstapi;
         }
 
         onCustomWidgetBeforeUpdate() {
-            if(firstapi){
+            if(firstapi=1){
                 callapi();
                 firstapi= false;
             }
