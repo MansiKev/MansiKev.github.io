@@ -30,7 +30,7 @@ var getScriptPromisify = (src) => {
         async render(arg, arg1) {
             // am4core.useTheme(am4themes_animated);
             // Create chart instance
-            // var chart = am4core.create(this._root, am4charts.XYChart);
+            var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
             var measures = arg1;
             // var data = [];
