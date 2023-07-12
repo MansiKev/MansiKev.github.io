@@ -102,6 +102,10 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
 
+            if(measures[i]==="[Account].[parentId].&[Discount]"){
+                console.log("mmm");
+            }
+
                 // var series2 = chart.series.push(new am4charts.LineSeries());
                 // series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
                 // series2.dataFields.dateX = "date";
