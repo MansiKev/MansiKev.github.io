@@ -78,7 +78,6 @@ var getScriptPromisify = (src) => {
             valueAxis2.syncWithAxis = valueAxis;
             // Create series
             for (var i = 0; i < measures.length; i++) {
-
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
