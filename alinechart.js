@@ -20,10 +20,9 @@ var firstapi=1;
         }
 
         onCustomWidgetBeforeUpdate() {
-            if(firstapi=1){
+          
                 callapi();
-                firstapi= false;
-            }
+                
         }
 
         connectedCallback() { }
@@ -134,9 +133,12 @@ var firstapi=1;
     customElements.define("com-sap-sample-alinechart", ALineChart);
 
     async function callapi() {
-        await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
-        await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-        await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
+        if(firstapi==1){
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
+            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
+            firstapi= false;
+        }
     }
 
 })();
