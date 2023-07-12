@@ -18,7 +18,7 @@ var getScriptPromisify = (src) => {
             this._props = {};
         }
 
-        oncustomeWidgetBeforeUpdate(changedProps) {
+        onCustomWidgetBeforeUpdate(changedProps) {
            callapi();
         }
 
