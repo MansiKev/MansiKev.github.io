@@ -128,7 +128,6 @@ var getScriptPromisify = (src) => {
         }
     }
 
-    customElements.define("com-sap-sample-alinechart", ALineChart);
     async function callapi() {
         await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
         await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
