@@ -18,14 +18,11 @@ var getScriptPromisify = (src) => {
             this._props = {};
         }
 
-        async oncustomeWidgetBeforeUpdate(){
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
-            await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js"); 
-
+        oncustomeWidgetBeforeUpdate() {
+           callapi();
         }
 
-         connectedCallback() {}
+        connectedCallback() { }
         onCustomWidgetResize(width, height) { }
 
         onCustomWidgetAfterUpdate(changedProps) { }
@@ -82,7 +79,7 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX}\nValue:{valueY}";
-                series.name= "abc";
+                series.name = "abc";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
@@ -101,7 +98,7 @@ var getScriptPromisify = (src) => {
                 bullet.circle.fill = am4core.color("#fff");
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
-                
+
                 if (measures[i] === "[Account].[parentId].&[Discount]") {
                     series.dataFields.valueY = "[Account].[parentId].&[Discount]";
                     series.yAxis = valueAxis2;
@@ -129,6 +126,12 @@ var getScriptPromisify = (src) => {
             // dateAxis.start = 0.79;
             // dateAxis.keepSelection = true;
         }
+    }
+
+    async function callapi() {
+        await getScriptPromisify("https://cdn.amcharts.com/lib/4/core.js");
+        await getScriptPromisify("https://cdn.amcharts.com/lib/4/charts.js");
+        await getScriptPromisify("https://cdn.amcharts.com/lib/4/themes/animated.js");
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
 
