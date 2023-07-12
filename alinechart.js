@@ -105,7 +105,7 @@ var getScriptPromisify = (src) => {
                 var series2 = chart.series.push(new am4charts.LineSeries());
                 series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
                 series2.dataFields.dateX = "date";
-                series2.yAxis = valueAxis2;
+                series2.yAxis = valueAxis2;  
             }
 
             chart.legend = new am4charts.Legend();
