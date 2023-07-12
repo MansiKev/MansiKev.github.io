@@ -102,13 +102,13 @@ var getScriptPromisify = (src) => {
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
 
-                var series2 = chart.series.push(new am4charts.LineSeries());
-                series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
-                series2.dataFields.dateX = "date";
-                series2.yAxis = valueAxis2;  
+                // var series2 = chart.series.push(new am4charts.LineSeries());
+                // series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
+                // series2.dataFields.dateX = "date";
+                // series2.yAxis = valueAxis2;  
             }
 
-            // chart.legend = new am4charts.Legend();
+            chart.legend = new am4charts.Legend();
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.lineX.disabled=true;
