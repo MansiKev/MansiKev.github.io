@@ -106,11 +106,6 @@ var getScriptPromisify = (src) => {
               series.dataFields.valueY="[Account].[parentId].&[Discount]";
               series.yAxis=valueAxis2;
             }
-
-                // var series2 = chart.series.push(new am4charts.LineSeries());
-                // series2.dataFields.valueY = "[Account].[parentId].&[Discount]";
-                // series2.dataFields.dateX = "date";
-                // series2.yAxis = valueAxis2;  
             }
 
             chart.legend = new am4charts.Legend();
@@ -131,16 +126,6 @@ var getScriptPromisify = (src) => {
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.series.push(series);
             chart.scrollbarX.parent = chart.bottomAxesContainer;
-
-            // dateAxis.getSeriesDataItem = function (series, position) {
-            //     var key = this.axisFieldName + this.axisLetter;
-            //     var value = this.positionToValue(position);
-            //     const dataItem = series.dataItems.getIndex(series.dataItems.findClosestIndex(value, function (x) {
-            //         return x[key] ? x[key] : undefined;
-            //     }, "any"));
-            //     return dataItem;
-            // }
-
             dateAxis.start = 0.79;
             dateAxis.keepSelection = true;
         }
