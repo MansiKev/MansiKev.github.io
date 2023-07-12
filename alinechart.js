@@ -37,8 +37,12 @@ var firstapi=1;
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
-            var measures = arg1;
+           
             // var data = [];
+            var measures=Object.keys(arg1);
+            var measure_description=Object.values(arg1);
+            console.log(measures);
+            console.log(measure_description);
             console.log(resultset);
 
             // var m=[];
@@ -78,19 +82,16 @@ var firstapi=1;
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis2.renderer.opposite = true;
             // Create series
-            console.log(measures);
+           
             
             
-            var measure=Object.keys(measures);
-            var measure_description=Object.values(measures);
-            console.log(measure);
-            console.log(measure_description);
+           
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX}\nValue:{valueY}";
-                series.name = "abc";
+                series.name = measure_description[i];
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
