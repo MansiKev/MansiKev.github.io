@@ -79,7 +79,7 @@ var getScriptPromisify = (src) => {
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "Date:{dateX}\nValue:{valueY}";
-                series.name="resultset[i][@MeasureDimension][description]";
+                series.name="measures[i]";
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
@@ -98,7 +98,7 @@ var getScriptPromisify = (src) => {
                 bullet.circle.fill = am4core.color("#fff");
                 var bullethover = bullet.states.create("hover");
                 bullethover.properties.scale = 1.3;
-
+                
                 if (measures[i] === "[Account].[parentId].&[Discount]") {
                     series.dataFields.valueY = "[Account].[parentId].&[Discount]";
                     series.yAxis = valueAxis2;
