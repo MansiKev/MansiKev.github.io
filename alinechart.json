@@ -1,6 +1,6 @@
 {
 	"id": "com.sap.sample.alinechart",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"name": "Amchart aaLinechart",
 	"description": "aLineChart",
 	"newInstancePrefix": "alinechart",
@@ -37,7 +37,7 @@
                 },
 				{
 					"name":"measures",
-					"type":"string[]",
+					"type":"any",
 					"description":"Add to measure"
 				}
             ]
