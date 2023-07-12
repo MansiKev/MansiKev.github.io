@@ -28,7 +28,7 @@ var getScriptPromisify = (src) => {
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
-            am4core.useTheme(am4themes_animated);
+            // am4core.useTheme(am4themes_animated);
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
