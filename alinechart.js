@@ -39,7 +39,7 @@ var firstapi = 1;
             var measures = Object.keys(arg1);
             var measure_description = Object.values(arg1);
             console.log(measures);
-            console.log(measure_description.concat("/"));
+            console.log(measure_description.slice("#"));
             console.log(resultset);
             // var m=[];
             //     for(var i=0;i<resultset.length;i++){
