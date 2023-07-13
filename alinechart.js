@@ -35,14 +35,12 @@ var firstapi = 1;
             // Create chart instance
             var chart = am4core.create(this._root, am4charts.XYChart);
             var resultset = arg;
-
             // var data = [];
             var measures = Object.keys(arg1);
             var measure_description = Object.values(arg1);
             console.log(measures);
             console.log(measure_description);
             console.log(resultset);
-
             // var m=[];
             //     for(var i=0;i<resultset.length;i++){
             //         if(m.indexOf(resultset[i]["Order_Date"].id)===-1){
@@ -84,7 +82,7 @@ var firstapi = 1;
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                series.tooltipText= "{dateX}:[bold]{valueY}";
+                series.tooltipText = "{dateX}:[bold]{valueY}";
                 // series.tooltipText = "Date:{dateX}\n Value:{valueY}";
                 series.name = measure_description[i];
                 series.strokeWidth = 2;
@@ -113,8 +111,8 @@ var firstapi = 1;
             }
 
             chart.legend = new am4charts.Legend();
-            chart.legend.position="top";
-            chart.legend.contentAlign="right";
+            chart.legend.position = "top";
+            chart.legend.contentAlign = "right";
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.lineX.disabled = true;
