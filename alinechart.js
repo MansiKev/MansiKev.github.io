@@ -122,12 +122,12 @@ var firstapi = 1;
             // chart.cursor.snapToSeries = series;
 
             // // Create vertical scrollbar and place it before the value axis
-            chart.scrollbarY = new am4core.Scrollbar();
-            chart.scrollbarY.parent = chart.leftAxesContainer;
+            // chart.scrollbarY = new am4core.Scrollbar();
+            // chart.scrollbarY.parent = chart.leftAxesContainer;
             // chart.scrollbarY.toBack();
 
             // // Create a horizontal scrollbar with previe and place it underneath the date axis
-            chart.scrollbarX = new am4charts.XYChartScrollbar();
+            chart.scrollbarX = new am4charts.XChartScrollbar();
             chart.scrollbarX.parent = chart.bottomAxesContainer;
             // chart.scrollbarX.series.push(series);
             // dateAxis.start = 0.79;
