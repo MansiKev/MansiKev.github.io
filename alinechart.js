@@ -111,8 +111,8 @@ var firstapi = 1;
             }
 
             chart.legend = new am4charts.Legend();
-            chart.legend.position = "right";
-            chart.legend.contentAlign = "top";
+            chart.legend.position = "top";
+            chart.legend.contentAlign = "right";
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.lineX.disabled = true;
@@ -122,13 +122,14 @@ var firstapi = 1;
             // chart.cursor.snapToSeries = series;
 
             // // Create vertical scrollbar and place it before the value axis
-            // chart.scrollbarY = new am4core.Scrollbar();
-            // chart.scrollbarY.parent = chart.leftAxesContainer;
+            chart.scrollbarY = new am4core.Scrollbar();
+            chart.scrollbarY.parent = chart.leftAxesContainer;
             // chart.scrollbarY.toBack();
 
             // // Create a horizontal scrollbar with previe and place it underneath the date axis
-            chart.scrollbarX = new am4charts.Scrollbar();
+            chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.parent = chart.bottomAxesContainer;
+            chart.scrollbarX = scrollbarX;
             // chart.scrollbarX.series.push(series);
             // dateAxis.start = 0.79;
             // dateAxis.keepSelection = true;
