@@ -20,10 +20,8 @@ var firstapi = 1;
         }
 
         onCustomWidgetBeforeUpdate() { }
-
         connectedCallback() { }
         onCustomWidgetResize(width, height) { }
-
         onCustomWidgetAfterUpdate(changedProps) { }
 
         async render(arg, arg1) {
@@ -82,8 +80,6 @@ var firstapi = 1;
             var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis2.renderer.opposite = true;
             // Create series
-
-
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
