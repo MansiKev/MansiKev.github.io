@@ -112,7 +112,7 @@ var firstapi = 1;
                 }
             }
 
-            chart.legend = new am4charts.Legend(this._root2,am4charts.XYChart);
+            chart.legend = new am4charts.Legend(this._root2);
             chart.legend.position = "top";
             chart.legend.contentAlign = "right";
 
