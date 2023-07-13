@@ -39,7 +39,7 @@ var firstapi = 1;
             var measures = Object.keys(arg1);
             var measure_description = Object.values(arg1);
             console.log(measures);
-            console.log(measure_description.slice("#"));
+            console.log(measure_description[1].slice(-6));
             console.log(resultset);
             // var m=[];
             //     for(var i=0;i<resultset.length;i++){
@@ -85,6 +85,7 @@ var firstapi = 1;
                 series.tooltipText = "{dateX}:[bold]{valueY}";
                 // series.tooltipText = "Date:{dateX}\n Value:{valueY}";
                 series.name = measure_description[i];
+                // series.stroke=
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
