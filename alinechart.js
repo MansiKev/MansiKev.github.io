@@ -9,7 +9,6 @@ var firstapi = 1;
     let template = document.createElement("template");
     template.innerHTML = ` 
 			<div id="chartdiv" style="width: 100%; height: 100%"></div>
-            <div id="legenddiv" style="padding:0"</div>
 		`;
     class ALineChart extends HTMLElement {
         constructor() {
@@ -17,7 +16,6 @@ var firstapi = 1;
             this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(template.content.cloneNode(true));
             this._root = this._shadowRoot.getElementById("chartdiv");
-            this._root2=this._shadowRoot.getElementById("legenddiv");
             this._props = {};
         }
 
