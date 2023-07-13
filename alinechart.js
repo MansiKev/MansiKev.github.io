@@ -83,12 +83,12 @@ var firstapi = 1;
             valueAxis2.renderer.opposite = true;
             // Create series
 
-            
+
             for (var i = 0; i < measures.length; i++) {
                 var series = chart.series.push(new am4charts.LineSeries());
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
-                series.tooltipText = "Date:{dateX}\nValue:{valueY}";
+                series.tooltipText = "Date:{dateX}\n measure_description[i]:{valueY}";
                 series.name = measure_description[i];
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
