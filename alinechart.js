@@ -9,7 +9,7 @@ var firstapi = 1;
     let template = document.createElement("template");
     template.innerHTML = ` 
 			<div id="chartdiv" style="width: 100%; height: 100%"></div>
-            <div id="legenddiv" style="padding:5px 0 20px 0"></div>
+            <div id="legenddiv" style="margin:5px 0 20px 0;"></div>
 		`;
     class ALineChart extends HTMLElement {
         constructor() {
