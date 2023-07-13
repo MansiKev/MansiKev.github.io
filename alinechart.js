@@ -83,7 +83,6 @@ var firstapi = 1;
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "{dateX}:[bold]{valueY}";
-                // series.tooltipText = "Date:{dateX}\n Value:{valueY}";
                 series.name = measure_description[i];
                 series.stroke=measure_description[i].slice(-7);
                 series.strokeWidth = 2;
