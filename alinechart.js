@@ -83,8 +83,8 @@ var firstapi = 1;
                 series.dataFields.valueY = measures[i];
                 series.dataFields.dateX = "date";
                 series.tooltipText = "{dateX}:[bold]{valueY}";
-                series.name = measure_description[i].slice(1);
-                series.stroke=measure_description[i].slice(2);
+                series.name = measure_description[i].split("$")[0];
+                series.stroke=measure_description[i].split("$")[1];
                 series.strokeWidth = 2;
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
