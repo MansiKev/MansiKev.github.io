@@ -115,6 +115,7 @@ var firstapi = 1;
             chart.legend = new am4charts.Legend(this._root2);
             chart.legend.position = "top";
             chart.legend.contentAlign = "right";
+            chart.legend.minHeight=300;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
