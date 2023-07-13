@@ -9,6 +9,7 @@ var firstapi = 1;
     let template = document.createElement("template");
     template.innerHTML = ` 
 			<div id="chartdiv" style="width: 100%; height: 100%"></div>
+            <div id="legenddiv" style="padding:5px 0 20px 0"></div>
 		`;
     class ALineChart extends HTMLElement {
         constructor() {
@@ -16,6 +17,7 @@ var firstapi = 1;
             this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(template.content.cloneNode(true));
             this._root = this._shadowRoot.getElementById("chartdiv");
+            this._root2 = this._shadowRoot.getElementById("legenddiv");
             this._props = {};
         }
 
@@ -110,10 +112,10 @@ var firstapi = 1;
                 }
             }
 
-            chart.legend = new am4charts.Legend();
+            chart.legend = new am4charts.Legend(this._root2,am4charts.XYChart);
             chart.legend.position = "top";
             chart.legend.contentAlign = "right";
-            chart.legend.maxHeight=400;
+
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.lineX.disabled = true;
@@ -130,7 +132,7 @@ var firstapi = 1;
             // // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
             chart.scrollbarX.parent = chart.bottomAxesContainer;
-            chart.scrollbarX.minHeight=20;
+            chart.scrollbarX.minHeight = 20;
             // chart.scrollbarX.series.push(series);
             // dateAxis.start = 0.79;
             // dateAxis.keepSelection = true;
