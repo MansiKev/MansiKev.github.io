@@ -135,6 +135,7 @@ var firstapi = 1;
             // chart.scrollbarX.series.push(series);
             // dateAxis.start = 0.79;
             // dateAxis.keepSelection = true;
+            chart.logo.disabled=true;
         }
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
