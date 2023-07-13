@@ -110,10 +110,10 @@ var firstapi = 1;
                 }
             }
 
-            chart.legend = new am4charts.Legend(this._root2);
+            chart.legend = new am4charts.Legend();
             chart.legend.position = "top";
             chart.legend.contentAlign = "right";
-            chart.legend.minHeight=300;
+            chart.legend.minHeight=80;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
