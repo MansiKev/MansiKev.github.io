@@ -84,12 +84,11 @@ var firstapi = 1;
                 series.dataFields.dateX = "date";
                 series.tooltipText = "{dateX}:[bold]{valueY}";
                 series.name = measure_description[i].split("$")[0];
-                series.stroke=measure_description[i].split("$")[1];
+                series.stroke = measure_description[i].split("$")[1];
                 series.strokeWidth = 2;
-                series.tooltip.getFillFromObject=false;
-                series.tooltip.label.fill=am4core.color("#000")
-                series.tooltip.getFillFromObject=false;
-                series.tooltip.background.fill=am4core.color("#ffffff00");
+                series.tooltip.getFillFromObject = false;
+                series.tooltip.background.fill = am4core.color("#ffffff00");
+                series.tooltip.label.fill = am4core.color("#000")
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
@@ -117,7 +116,7 @@ var firstapi = 1;
             chart.legend = new am4charts.Legend();
             chart.legend.position = "top";
             chart.legend.contentAlign = "right";
-            chart.legend.minHeight=50;
+            chart.legend.minHeight = 50;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
@@ -139,7 +138,7 @@ var firstapi = 1;
             // chart.scrollbarX.series.push(series);
             // dateAxis.start = 0.79;
             // dateAxis.keepSelection = true;
-            chart.logo.disabled=true;
+            chart.logo.disabled = true;
         }
     }
     customElements.define("com-sap-sample-alinechart", ALineChart);
