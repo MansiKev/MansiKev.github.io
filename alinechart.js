@@ -86,7 +86,7 @@ var firstapi = 1;
                 series.name = measure_description[i].split("$")[0];
                 series.stroke=measure_description[i].split("$")[1];
                 series.strokeWidth = 2;
-                series.tooltip.background.fill=am4charts.color("#ffffff00")
+                series.tooltip.background.fill=am4core.color("#ffffff00")
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
