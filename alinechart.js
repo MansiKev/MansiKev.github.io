@@ -89,7 +89,7 @@ var firstapi = 1;
                 series.tooltip.getFillFromObject = false;
                 series.tooltip.background.fill = am4core.color("#f0f0f0");
                 series.tooltip.label.fill = am4core.color("#000");
-                // series.tooltip.background.propertyFields.stroke="ffffff00";
+                series.tooltip.background.propertyFields.stroke="f0f0f0";
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
