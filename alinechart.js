@@ -88,7 +88,8 @@ var firstapi = 1;
                 series.strokeWidth = 2;
                 series.tooltip.getFillFromObject = false;
                 series.tooltip.background.fill = am4core.color("#ffffff00");
-                series.tooltip.label.fill = am4core.color("#000")
+                series.tooltip.label.fill = am4core.color("#000");
+                series.tooltip.background.propertyFields.stroke="ffffff00";
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
