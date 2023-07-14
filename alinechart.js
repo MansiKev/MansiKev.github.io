@@ -89,11 +89,11 @@ var firstapi = 1;
                 series.tooltip.getFillFromObject = false;
                 series.tooltip.background.fill = am4core.color("#ffffff00");
                 series.tooltip.label.fill = am4core.color("#000");
-                series.tooltip.background.propertyFields.stroke="ffffff00";
+                // series.tooltip.background.propertyFields.stroke="ffffff00";
                 series.minBulletDistance = 15;
                 // Drop-shaped tooltips
                 // series.tooltip.background.cornerRadius = 20;
-                series.tooltip.background.strokeOpacity = 0;
+                // series.tooltip.background.strokeOpacity = 0;
                 series.tooltip.pointerOrientation = "vertical";
                 series.tooltip.label.minWidth = 40;
                 series.tooltip.label.minHeight = 40;
