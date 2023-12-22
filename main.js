@@ -79,7 +79,7 @@ var getScriptPromisify = (src) => {
 
 
       nodes=[
-      {"name": "Total"},
+      // {"name": "Total"},
       {"name": "Environment"},
       {"name": "Land use"},
       {"name": "Cocoa butter (Organic)"},
@@ -107,7 +107,7 @@ var getScriptPromisify = (src) => {
       {"name": "Working hours"}
    ],
    links= [
-      {"source": "Total", "target": "Environment", "value": 0.342284047256003},
+      // {"source": "Total", "target": "Environment", "value": 0.342284047256003},
       {"source": "Environment", "target": "Land use", "value": 0.32322870366987},
       {"source": "Land use", "target": "Cocoa butter (Organic)", "value": 0.177682517071359},
       {"source": "Land use", "target": "Cocoa mass (Organic)", "value": 0.137241325342711},
@@ -140,7 +140,7 @@ var getScriptPromisify = (src) => {
       {"source": "Resource depletion", "target": "Cocoa butter (Organic)", "value": 0},
       {"source": "Environment", "target": "Refrigeration", "value": 0},
       {"source": "Environment", "target": "Packaging", "value": 0},
-      {"source": "Total", "target": "Human rights", "value": 0.307574096993239},
+      // {"source": "Total", "target": "Human rights", "value": 0.307574096993239},
       {"source": "Human rights", "target": "Child labour", "value": 0.0410641202645833},
       {"source": "Child labour", "target": "Hazelnuts (Organic)", "value": 0.0105339381639722},
       {"source": "Child labour", "target": "Cocoa mass (Organic)", "value": 0.0105},
