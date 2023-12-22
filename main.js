@@ -51,8 +51,8 @@ var getScriptPromisify = (src) => {
 
       const [dimension] = dimensions
       const [measure] = measures
-      const nodes = []
-      const links = []
+      let nodes = []
+      let links = []
 
       data = appendTotal(data)
       data.forEach(d => {
