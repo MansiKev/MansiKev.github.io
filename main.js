@@ -52,7 +52,7 @@ var getScriptPromisify = (src) => {
       // const [dimension] = dimensions
       // const [measure] = measures
 
-      var data=[
+      var data = [
     {
         "dimensions_0": {
             "id": "356779a9a1696714480f57fa3fb66d",
@@ -295,15 +295,29 @@ var getScriptPromisify = (src) => {
     }
 ]
 
-let links=[];
-data.forEach(d=>{
+let links = [];
+let nodes = [];
+data.forEach(d => {
+    nodes.push(d["dimensions_0"].label);
+    nodes.push(d["dimensions_1"].label);
     links.push({
         source: d["dimensions_0"].label,
         target: d["dimensions_1"].label,
         value: d["measures_0"].raw
-      })
+    })
 })
 
+nodes.sort();
+
+var last;
+let node = [];
+for (var i = 0; i < nodes.length; i++) {
+    if (last !== nodes[i]) {
+        node.push(nodes[i]);
+        last = nodes[i];
+    }
+}
+console.log(node);
 console.log(links);
       
       // let nodes = []
@@ -479,7 +493,7 @@ console.log(links);
         series: [
           {
             type: 'sankey',
-            data: nodes,
+            data: node,
             links: links,
             emphasis: {
               focus: 'adjacency'
