@@ -306,32 +306,32 @@ data.forEach(d=>{
 
 console.log(links);
       
-      let nodes = []
-      let links = []
+      // let nodes = []
+      // let links = []
 
       
-      data = appendTotal(data)
-      data.forEach(d => {
-        const { label, id, parentId } = d[dimension.key]
-        const { raw } = d[measure.key]
-        nodes.push({ name: label})
+      // data = appendTotal(data)
+      // data.forEach(d => {
+      //   const { label, id, parentId } = d[dimension.key]
+      //   const { raw } = d[measure.key]
+      //   nodes.push({ name: label})
 
-        const dParent = data.find(d => {
-          const { id } = d[dimension.key]
-          return id === parentId
-        })
-        if (dParent) {
-          const { label: labelParent } = dParent[dimension.key]
-          links.push({
-            source: labelParent,
-            target: label,
-            value: raw
-          })
-        }
-      })
-      this._echart = echarts.init(this._root)
-      // https://echarts.apache.org/examples/en/editor.html?c=sankey-levels
-      // https://echarts.apache.org/en/option.html
+      //   const dParent = data.find(d => {
+      //     const { id } = d[dimension.key]
+      //     return id === parentId
+      //   })
+      //   if (dParent) {
+      //     const { label: labelParent } = dParent[dimension.key]
+      //     links.push({
+      //       source: labelParent,
+      //       target: label,
+      //       value: raw
+      //     })
+      //   }
+      // })
+      // this._echart = echarts.init(this._root)
+      // // https://echarts.apache.org/examples/en/editor.html?c=sankey-levels
+      // // https://echarts.apache.org/en/option.html
 
 
    //    nodes=[
