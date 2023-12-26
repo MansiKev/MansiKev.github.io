@@ -51,9 +51,265 @@ var getScriptPromisify = (src) => {
 
       const [dimension] = dimensions
       const [measure] = measures
+
+      var data=[
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "7ece3c13615871cc96094bfc4dddb9",
+            "label": "Beverly Hills"
+        },
+        "measures_0": {
+            "raw": 147,
+            "formatted": "147.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "a1edff17ec0464c4c048d25d25bce7",
+            "label": "San Diego"
+        },
+        "measures_0": {
+            "raw": 243,
+            "formatted": "243.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "ca442975313ffa75bbac92e69d7950",
+            "label": "Oakland"
+        },
+        "measures_0": {
+            "raw": 112,
+            "formatted": "112.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "ce896907ef849c99898b8b2043f883",
+            "label": "Santa Barbara"
+        },
+        "measures_0": {
+            "raw": 101,
+            "formatted": "101.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "d0aa2dffa0da83f1f34681308d04db",
+            "label": "Los Angeles"
+        },
+        "measures_0": {
+            "raw": 1787,
+            "formatted": "1,787.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "356779a9a1696714480f57fa3fb66d",
+            "label": "California"
+        },
+        "dimensions_1": {
+            "id": "f4334fdfa1c728eae375fe781e2e2d",
+            "label": "San Francisco"
+        },
+        "measures_0": {
+            "raw": 861,
+            "formatted": "861.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "8fcebe1ce891c49c60a3c26b317eba",
+            "label": "Nevada"
+        },
+        "dimensions_1": {
+            "id": "05c27bf00932572de28bf65a0539ba",
+            "label": "Las Vegas"
+        },
+        "measures_0": {
+            "raw": 154,
+            "formatted": "154.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "8fcebe1ce891c49c60a3c26b317eba",
+            "label": "Nevada"
+        },
+        "dimensions_1": {
+            "id": "11a102ecaaa05237b301ecc9b8e0c9",
+            "label": "Carson City"
+        },
+        "measures_0": {
+            "raw": 61,
+            "formatted": "61.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "8fcebe1ce891c49c60a3c26b317eba",
+            "label": "Nevada"
+        },
+        "dimensions_1": {
+            "id": "5f55afd748fc4ad2580b7686113251",
+            "label": "Henderson"
+        },
+        "measures_0": {
+            "raw": 75,
+            "formatted": "75.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "8fcebe1ce891c49c60a3c26b317eba",
+            "label": "Nevada"
+        },
+        "dimensions_1": {
+            "id": "77b6e24f5b78b6eb0697aa8994ce15",
+            "label": "Reno"
+        },
+        "measures_0": {
+            "raw": 28,
+            "formatted": "28.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "08a3a64bc43f51b7db1e5543f9eafc",
+            "label": "Hillsboro"
+        },
+        "measures_0": {
+            "raw": 113,
+            "formatted": "113.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "20e87efde701ab6d4f4daf6d8f6375",
+            "label": "Beaverton"
+        },
+        "measures_0": {
+            "raw": 41,
+            "formatted": "41.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "4f2f6920aeff56e795b0e4ab94643c",
+            "label": "Salem"
+        },
+        "measures_0": {
+            "raw": 215,
+            "formatted": "215.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "918e862585716e5f6be3899347d4ae",
+            "label": "Eugene"
+        },
+        "measures_0": {
+            "raw": 222,
+            "formatted": "222.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "9ae3733db986637cf9860f3216aa38",
+            "label": "Gresham"
+        },
+        "measures_0": {
+            "raw": 142,
+            "formatted": "142.00",
+            "unit": "USD"
+        }
+    },
+    {
+        "dimensions_0": {
+            "id": "da4d1129a255f83fb03bf32fde034e",
+            "label": "Oregon"
+        },
+        "dimensions_1": {
+            "id": "e7410c7c47562ef40b190763b5487c",
+            "label": "Portland"
+        },
+        "measures_0": {
+            "raw": 427,
+            "formatted": "427.00",
+            "unit": "USD"
+        }
+    }
+]
+
+let links=[];
+data.forEach(d=>{
+    links.push({
+        source: d[dimensions_0].label,
+        target: d[dimensions_1].label,
+        value: d[measures_0].raw
+      })
+})
+
+console.log(links);
+      
       let nodes = []
       let links = []
 
+      
       data = appendTotal(data)
       data.forEach(d => {
         const { label, id, parentId } = d[dimension.key]
