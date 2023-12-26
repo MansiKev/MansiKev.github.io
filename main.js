@@ -298,9 +298,9 @@ var getScriptPromisify = (src) => {
 let links=[];
 data.forEach(d=>{
     links.push({
-        source: d[dimensions_0].label,
-        target: d[dimensions_1].label,
-        value: d[measures_0].raw
+        source: d["dimensions_0"].label,
+        target: d["dimensions_1"].label,
+        value: d["measures_0"].raw
       })
 })
 
