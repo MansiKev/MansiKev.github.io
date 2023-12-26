@@ -46,11 +46,11 @@ var getScriptPromisify = (src) => {
 
       if (dataBinding.state !== 'success') { return }
 
-      let { data, metadata } = dataBinding
-      const { dimensions, measures } = parseMetadata(metadata)
+      // let { data, metadata } = dataBinding
+      // const { dimensions, measures } = parseMetadata(metadata)
 
-      const [dimension] = dimensions
-      const [measure] = measures
+      // const [dimension] = dimensions
+      // const [measure] = measures
 
       var data=[
     {
